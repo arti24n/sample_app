@@ -48,3 +48,4 @@ group :production do
 end
 
 gem 'capybara'
+gem 'database_cleaner'
