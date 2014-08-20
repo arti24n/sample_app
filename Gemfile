@@ -6,7 +6,11 @@ gem 'rails', '4.1.1'
 gem 'pg'
 # Use PostgreSQL as the database for Active Record
 group :development, :test do
+  gem 'guard-rspec'
   gem 'rspec-rails'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -37,6 +41,9 @@ end
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
+  gem 'rb-notifu'
+  gem 'win32console'
+  gem 'wdm'
 end
 
 gem 'database_cleaner'
