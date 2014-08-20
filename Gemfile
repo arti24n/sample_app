@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
-# Use sqlite3 as the database for Active Record
+gem 'pg'
+# Use PostgreSQL as the database for Active Record
 group :development, :test do
-  gem 'sqlite3'
   gem 'rspec-rails'
 end
 # Use SCSS for stylesheets
@@ -27,25 +27,16 @@ gem 'jbuilder', '~> 2.0'
 group :doc do
 gem 'sdoc', '~> 0.4.0',  require: false        
 end
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
-gem 'capybara'
+group :test do
+  gem 'selenium-webdriver'
+  gem 'capybara'
+end
+
 gem 'database_cleaner'
